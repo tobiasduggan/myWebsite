@@ -631,3 +631,15 @@ pre tt:after {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+ 
+ .column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+} 
