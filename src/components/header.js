@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import logo from "../images/logo_dark.png"
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, menuLinks }) => (
   <header
     style={{
       background: `teal`,
@@ -14,20 +14,52 @@ const Header = ({ siteTitle }) => (
       style={{
         margin: `0 auto`,
         maxWidth: 960,
-        padding: `1.45rem 1rem 0.2rem`,
+        padding: `1.45rem 1rem 0rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-           <img src={logo} alt="" height={100} />
-        </Link>
-      </h1>
+      <div>
+        <nav>
+          <ul style={{ display: "flex", flex: 1 }}>
+            <h1
+              style={{
+                margin: 0,
+                paddingRight: "50px",
+              }}
+            >
+              <Link
+                to="/"
+                style={{
+                  color: `white`,
+                  textDecoration: `none`,
+                }}
+              >
+                <img src={logo} alt="" height={100} />
+              </Link>
+            </h1>
+            {menuLinks.map(link => (
+              <li
+                key={link.name}
+                style={{
+                  listStyleType: `none`,
+                  padding: `1rem`,
+                  marginTop: `15px`,
+                }}
+              >
+                <Link
+                  style={{
+                    color: `white`,
+                    textDecoration: "none",
+                    fontFamily: "sans-serif",
+                  }}
+                  to={link.link}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 )

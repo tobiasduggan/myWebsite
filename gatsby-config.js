@@ -3,6 +3,13 @@ module.exports = {
     title: `tobiasDuggan`,
     description: `A place to discuss all of the personal projects I plan to undertake.`,
     author: `Tobias Duggan`,
+    menuLinks:[
+         {
+          name:'About',
+          link:'/about'
+         }
+  ]
+    
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
