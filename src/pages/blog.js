@@ -1,13 +1,14 @@
 import React from "react"
-
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import PostPreview from "../components/post-preview"
 
-const Blog = () => (
+const Blog  = ({ data }) => (
   <Layout>
     <SEO title="Blog" />
     <h1>Blog Posts</h1>
-    {data.recentMarkdownRemark.edges.map(post => (
+    {data.allMarkdownRemark.edges.map(post => (
       <PostPreview blogPost = {post}></PostPreview>
     ))}
   </Layout>
@@ -16,7 +17,7 @@ const Blog = () => (
 export default Blog
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query BlogQuery {
     allMarkdownRemark(limit: 1000) {
       edges {
         node {
