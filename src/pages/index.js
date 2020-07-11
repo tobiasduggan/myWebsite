@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => (
     <p>Have a nice day.</p>
     <h1>Recent Blog Posts</h1>
 
-    {data.allMarkdownRemark.edges.map(post => (
+    {data.recentMarkdownRemark.edges.map(post => (
       <PostPreview blogPost = {post}></PostPreview>
     ))}
 
@@ -30,7 +30,7 @@ const IndexPage = ({ data }) => (
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(limit: 3) {
+    recentMarkdownRemark(limit: 3) {
       edges {
         node {
           frontmatter {
