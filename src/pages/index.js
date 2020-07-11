@@ -5,11 +5,15 @@ import PostPreview from "../components/post-preview"
 import { graphql } from "gatsby"
 import "../styles/index.scss"
 
+
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <div class="container">
-      <img alt="code" src={require("../images/codeBG.jpg")} />
+    <div class="container" style = {{
+              maxWidth: "100%",
+              marginBottom: "1.5rem"
+            }}>
+      <img  alt="code" src={require("../images/codeBG.jpg")} />
       <h1 className="centered">Welcome</h1>
     </div>
     <p>Welcome to my new website!</p>

@@ -1,41 +1,39 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import logo from "../images/logo_white.png"
+import logo from "../images/logo_dark.png"
+import {
+  Navbar,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+} from "reactstrap"
 
-const Header = ({ siteTitle, menuLinks }) => (
-  <header
-    style={{
-      background: `teal`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
+const Header = ({ siteTitle, menuLinks }) => {
+  return (
+    <header
       style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1rem 0rem`,
+        marginBottom: `1.45rem`,
       }}
     >
-      <h1
-        style={{
-          margin: 0,
-          paddingRight: "50px",
-        }}
-      >
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          <img src={logo} alt="" height={100} />
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+      <div>
+        <Navbar color="light" light expand="md">
+          <NavbarBrand href="/">
+            <img src={logo} alt="" height={100} />
+          </NavbarBrand>
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink href="/about/">About</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="blog">Blog</NavLink>
+            </NavItem>
+          </Nav>
+        </Navbar>
+      </div>
+    </header>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
