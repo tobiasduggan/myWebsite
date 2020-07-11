@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import logo from "../images/logo_dark.png"
+import logo from "../images/logo_white.png"
 
 const Header = ({ siteTitle, menuLinks }) => (
   <header
@@ -17,49 +17,22 @@ const Header = ({ siteTitle, menuLinks }) => (
         padding: `1.45rem 1rem 0rem`,
       }}
     >
-      <div>
-        <nav>
-          <ul style={{ display: "flex", flex: 1 }}>
-            <h1
-              style={{
-                margin: 0,
-                paddingRight: "50px",
-              }}
-            >
-              <Link
-                to="/"
-                style={{
-                  color: `white`,
-                  textDecoration: `none`,
-                }}
-              >
-                <img src={logo} alt="" height={100} />
-              </Link>
-            </h1>
-            {menuLinks.map(link => (
-              <li
-                key={link.name}
-                style={{
-                  listStyleType: `none`,
-                  padding: `1rem`,
-                  marginTop: `15px`,
-                }}
-              >
-                <Link
-                  style={{
-                    color: `white`,
-                    textDecoration: "none",
-                    fontFamily: "sans-serif",
-                  }}
-                  to={link.link}
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
+      <h1
+        style={{
+          margin: 0,
+          paddingRight: "50px",
+        }}
+      >
+        <Link
+          to="/"
+          style={{
+            color: `white`,
+            textDecoration: `none`,
+          }}
+        >
+          <img src={logo} alt="" height={100} />
+        </Link>
+      </h1>
     </div>
   </header>
 )
