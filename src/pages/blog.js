@@ -16,7 +16,7 @@ const Blog  = ({ data }) => (
 
 export default Blog
 
-export const pageQuery = graphql`
+export const blogQuery = graphql`
   query BlogQuery {
     allMarkdownRemark(limit: 1000) {
       edges {
