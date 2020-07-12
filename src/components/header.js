@@ -1,15 +1,26 @@
 import PropTypes from "prop-types"
-import React from "react"
+import React, { useState } from "react"
 import logo from "../images/logo_dark.png"
 import {
+  Collapse,
   Navbar,
+  NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
   NavLink,
-} from "reactstrap"
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  NavbarText
+} from 'reactstrap';
 
 const Header = ({ siteTitle, menuLinks }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+
   return (
     <header
       style={{
@@ -19,8 +30,10 @@ const Header = ({ siteTitle, menuLinks }) => {
       <div>
         <Navbar color="light" light expand="md">
           <NavbarBrand href="/">
-            <img src={logo} alt="" height={100} />
+            <img src={logo} alt="" height={"50em"} />
           </NavbarBrand>
+          <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
               <NavLink href="/about/">About</NavLink>
@@ -29,6 +42,7 @@ const Header = ({ siteTitle, menuLinks }) => {
               <NavLink href="blog">Blog</NavLink>
             </NavItem>
           </Nav>
+          </Collapse>
         </Navbar>
       </div>
     </header>

@@ -1,6 +1,7 @@
 ---
 path: '/first-blog'
 title: 'First Blog Post'
+date: '2020-07-01'
 ---
 
 This is my first blog post woohoo

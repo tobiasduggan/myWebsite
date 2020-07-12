@@ -18,12 +18,15 @@ export default Blog
 
 export const blogQuery = graphql`
   query BlogQuery {
-    allMarkdownRemark(limit: 1000) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 1000) {
       edges {
         node {
           frontmatter {
             title
             path
+            date
           }
         }
       }

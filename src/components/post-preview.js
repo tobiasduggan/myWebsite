@@ -21,7 +21,7 @@ const PostPreview = ({ blogPost }) => (
               <CardTitle>
                 <h2>{blogPost.node.frontmatter.title}</h2>
               </CardTitle>
-              <CardSubtitle>11-07-2020</CardSubtitle>
+              <CardSubtitle>{blogPost.node.frontmatter.date}</CardSubtitle>
               <CardText>
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
