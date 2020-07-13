@@ -21,9 +21,7 @@ const IndexPage = ({ data }) => (
           justifyContent: "center",
         }}
       >
-        <h1>Welcome</h1>
-        <p>Welcome to my new website!</p>
-        <p>Have a nice day.</p>
+        <h1>Exploring. Learning. Developing.</h1>
       </div>
       <h1  style={{
         color: "white"
