@@ -2,15 +2,18 @@ import React from "react"
 import { Card, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap"
 
 const PostPreview = ({ blogPost }) => (
-  <div class="container" >
+  
     <a href={blogPost.node.frontmatter.path}>
-      <Card style={{ width: "100%" }}>
+      <Card style={{ 
+        width: "100%",
+        backgroundColor: "black",
+        color: "white" }}>
         <div class="row no-gutters" >
           <div class="col-auto" style={{ width: "35%", height: "200px"}}>
             <img style = {{
               width: "100%",
               height: "100%",
-              objectFit: "cover"
+              objectFit: "cover",
             }}
               alt="code"
               src={require("../images/codeBG.jpg")}
@@ -31,7 +34,6 @@ const PostPreview = ({ blogPost }) => (
         </div>
       </Card>
     </a>
-  </div>
 )
 
 export default PostPreview

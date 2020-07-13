@@ -5,34 +5,46 @@ import PostPreview from "../components/post-preview"
 import { graphql } from "gatsby"
 import "../styles/index.scss"
 
-
 const IndexPage = ({ data }) => (
-  <Layout>
-    <SEO title="Home" />
-    <div class="container" style = {{
-              maxWidth: "100%",
-              marginBottom: "1.5rem"
-            }}>
-      <img  alt="code" src={require("../images/codeBG.jpg")} />
-      <h1 className="centered">Welcome</h1>
-    </div>
-    <p>Welcome to my new website!</p>
-    <p>Have a nice day.</p>
-    <h1>Recent Posts</h1>
+  <div class="bg_image">
+    <Layout>
+      <SEO title="Home" />
+      <div
+        class="container"
+        style={{
+          maxWidth: "100%",
+          marginBottom: "1.5rem",
+          height: "30rem",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <h1>Welcome</h1>
+      </div>
+      <p>Welcome to my new website!</p>
+      <p>Have a nice day.</p>
+      <h1>Recent Posts</h1>
 
-    {data.allMarkdownRemark.edges.map(post => (
-      <PostPreview blogPost = {post}></PostPreview>
-    ))}
+      
+      {data.allMarkdownRemark.edges.map(post => (
+        <div class="blog_preview" >
+        <PostPreview blogPost={post}></PostPreview>
+        </div>
+      ))}
+      
 
-    <p>Have a nice day.</p>
-  </Layout>
+      <p>Have a nice day.</p>
+    </Layout>
+  </div>
 )
 
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      limit: 3) {
+      limit: 3
+    ) {
       edges {
         node {
           frontmatter {

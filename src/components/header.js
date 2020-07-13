@@ -9,11 +9,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
 } from 'reactstrap';
 
 const Header = ({ siteTitle, menuLinks }) => {
@@ -28,7 +23,7 @@ const Header = ({ siteTitle, menuLinks }) => {
       }}
     >
       <div>
-        <Navbar color="light" light expand="md">
+        <Navbar color="dark" light expand="md">
           <NavbarBrand href="/">
             <img src={logo} alt="" height={"50em"} />
           </NavbarBrand>
@@ -36,10 +31,10 @@ const Header = ({ siteTitle, menuLinks }) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="/about/">About</NavLink>
+              <NavLink href="./about">About</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="blog">Blog</NavLink>
+              <NavLink href="./blog">Blog</NavLink>
             </NavItem>
           </Nav>
           </Collapse>
