@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 import React, { useState } from "react"
-import logo from "../images/logo_dark.png"
+import logo from "../images/logo_white.png"
 import {
   Collapse,
   Navbar,

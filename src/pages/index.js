@@ -16,15 +16,18 @@ const IndexPage = ({ data }) => (
           marginBottom: "1.5rem",
           height: "30rem",
           display: "flex",
+          flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
         }}
       >
         <h1>Welcome</h1>
+        <p>Welcome to my new website!</p>
+        <p>Have a nice day.</p>
       </div>
-      <p>Welcome to my new website!</p>
-      <p>Have a nice day.</p>
-      <h1>Recent Posts</h1>
+      <h1  style={{
+        color: "white"
+      }}>Recent Posts</h1>
 
       
       {data.allMarkdownRemark.edges.map(post => (
@@ -32,9 +35,6 @@ const IndexPage = ({ data }) => (
         <PostPreview blogPost={post}></PostPreview>
         </div>
       ))}
-      
-
-      <p>Have a nice day.</p>
     </Layout>
   </div>
 )
