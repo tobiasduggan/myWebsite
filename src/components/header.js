@@ -31,10 +31,10 @@ const Header = ({ siteTitle, menuLinks }) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="./about">About</NavLink>
+              <NavLink href="./about/">About</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="./blog">Blog</NavLink>
+              <NavLink href="./blog/">Blog</NavLink>
             </NavItem>
           </Nav>
           </Collapse>
