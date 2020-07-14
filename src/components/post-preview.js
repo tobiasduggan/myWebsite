@@ -64,7 +64,7 @@ function NarrowScreen({blogPost}) {
 }
 
 function BlogPreviewCard({blogPost}) {
-  if (window.innerWidth > 750) {
+  if (1) {
     return <WideScreen blogPost={blogPost} />
   }
   return <NarrowScreen blogPost={blogPost} />
