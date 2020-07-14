@@ -2,12 +2,14 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostPreview from "../components/post-preview"
+import StyledBackgroundSection from "../components/home-background"
 import { graphql } from "gatsby"
 import "../styles/index.scss"
 
 const IndexPage = ({ data }) => (
-  <div class="bg_image">
+  <StyledBackgroundSection>
     <Layout>
+    
       <SEO title="Home" />
       <div
         class="container"
@@ -34,7 +36,7 @@ const IndexPage = ({ data }) => (
         </div>
       ))}
     </Layout>
-  </div>
+  </StyledBackgroundSection>
 )
 
 export const pageQuery = graphql`
