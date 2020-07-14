@@ -654,3 +654,30 @@ pre tt:after {
 .blog_preview:hover {
   opacity: 1.0;
 }
+
+#social-buttons {
+	font-size: 10em;
+}
+a.fa {
+	color: inherit;
+}
+
+a.fa:hover {
+	text-decoration: none;
+}
+
+a.fa-twitter:hover {
+	color: #55acee;
+}
+
+a.fa-instagram:hover {
+	color: #833AB4;
+}
+
+a.fa-linkedin:hover {
+	color: #0077b5;
+}
+
+a.fa-github:hover {
+	color: #000;
+}
