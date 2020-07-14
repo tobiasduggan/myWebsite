@@ -2,14 +2,12 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostPreview from "../components/post-preview"
-import StyledBackgroundSection from "../components/home-background"
 import { graphql } from "gatsby"
 import "../styles/index.scss"
 
 const IndexPage = ({ data }) => (
-  <StyledBackgroundSection>
+  <div class="bg_image">
     <Layout>
-    
       <SEO title="Home" />
       <div
         class="container"
@@ -25,18 +23,21 @@ const IndexPage = ({ data }) => (
       >
         <h1>Exploring. Learning. Developing.</h1>
       </div>
-      <h1  style={{
-        color: "white"
-      }}>Recent Posts</h1>
+      <h1
+        style={{
+          color: "white",
+        }}
+      >
+        Recent Posts
+      </h1>
 
-      
       {data.allMarkdownRemark.edges.map(post => (
-        <div class="blog_preview" >
-        <PostPreview blogPost={post}></PostPreview>
+        <div class="blog_preview">
+          <PostPreview blogPost={post}></PostPreview>
         </div>
       ))}
     </Layout>
-  </StyledBackgroundSection>
+  </div>
 )
 
 export const pageQuery = graphql`
