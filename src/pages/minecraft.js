@@ -211,7 +211,7 @@ function ServerStatus({ username }) {
   }
   return (
     <div>
-      <h2>This is guy isn't (He's a dick)</h2>
+      <h2>This guy isn't (He's a dick)</h2>
       <img
         style={{
           width: "100px",
@@ -223,20 +223,6 @@ function ServerStatus({ username }) {
     </div>
   )}
 
-  function callServer() {
-    axios
-    .get("https://api.mcsrvstat.us/2/145.239.252.26:25628")
-    .then(function (response) {
-      // handle success
-      console.log(response)
-    })
-    .catch(function (error) {
-      // handle error
-      console.log(error)
-    })
-    .then(function () {
-      // always executed
-    })
-  }
+ 
 
 export default MinecraftPage
