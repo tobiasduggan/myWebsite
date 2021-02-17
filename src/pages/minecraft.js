@@ -74,7 +74,7 @@ const MinecraftPage = () => (
                 objectFit: "cover",
               }}
               alt="code"
-              src={require("../images/minecraft/Toby.jpg")}
+              src={require("../images/minecraft/toby.jpg")}
             />
           </div>
           <div class="col">
