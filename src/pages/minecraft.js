@@ -194,7 +194,7 @@ const MinecraftPage = () => (
 )
 
 function ServerStatus({ username }) {
-  if (0) {
+  if (username === "ThetaDelta") {
     return (
       <div>
         <h2>This guy sure is!</h2>
