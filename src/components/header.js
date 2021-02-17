@@ -30,6 +30,9 @@ const Header = ({ siteTitle, menuLinks }) => {
           <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
+          <NavItem>
+              <NavLink href="./minecraft">Minecraft</NavLink>
+            </NavItem>
             <NavItem>
               <NavLink href="./about">About</NavLink>
             </NavItem>
